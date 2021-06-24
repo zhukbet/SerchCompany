@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+.conteiner_div{
+    border: 1px solid black;
+}
+
+.f {
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.company{
+    display: flex;
+    height: 100vh;
+   
+}
+.left_option{
+    margin-right: 15px;
+    width: 150px;
+    border: .5vh solid rgb(104, 104, 104);
+    
+}
+.left_option div{
+    border-bottom: .5vh solid gray;
+    
+    width: 100%;
+    /*  height: 200px; */
+}
+.chagesPercent_global{
+    height: 10vh;
+}
+.price_global {
+    height: 10vh;
+}
+.information_company{
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border: .5vh solid gray;
+    overflow-y: hidden;
+    border-right: none;
+   border-left: none;
+   
+}
+
+.information_conteiner_company{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    height: 100%;
+    width: 100%;
+    margin-right: 5px;
+    transition: all 2s;
+    
+}
+.global_inform{
+
+    display: flex;
+    width: 100%;
+    max-width: 198px;
+    height: 100vh;
+    align-items: center;
+   
+    /* margin: 0 10px; */
+}
+.information_conteiner_company.delate{
+    height: 0; 
+    width: 0;
+    font-size: 1px;
+    border: none;
+    filter: blur(7px);
+ 
+}
+.information_conteiner_company.delate .img_company{
+    transition: all 1s;
+    width:0px;
+    
+}
+
+
+.information_conteiner_company div{
+    /* ТУТ */
+    /* border-top: .5vh solid gray; */
+    border-left: .5vh solid gray;
+    border-right: .5vh solid gray; 
+    border-bottom: .5vh solid gray;
+}
+
+.close_company{
+    opacity: 0;
+    /* background: red; */
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.information_conteiner_company:hover .close_company{
+    background: red;
+    opacity: 1;
+
+}
+
+
+.img_company{
+    /* ТУТ */
+   /* height: 100px; */
+   height: 28vh;
+   width: 190px;
+ 
+   display: flex;
+   align-items: center; 
+   position: relative;
+ 
+   
+}
+
+.img_company img{
+    width: 100%;
+    max-height: 30vh;
+   
+}
+
+.price_plus{
+color: greenyellow;
+}
+.price_minus{
+    color: red;
+}
+.symbol_company{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+
+
+}
+.chages_company{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+.name_company{
+   
+  
+   
+  /* width: 150px; */
+  text-align: center;
+  height: 18vh;
+}
+.ceo_company{
+    height: 10vh;
+    border-bottom: none !important ;
+}
+
+.close_company{
+    /* opacity: 0; */
+    background: red;
+    height: 30px;
+    width: 30px;
+}
+.arrow{
+    position: fixed;
+    left: 4px;
+    top: 20px;
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow img{
+    height: 25px;
+}
+
+</style>
+<div class="company"></div>
+<script src="./api.js"></script>
+<script src="./comper.js"></script>
+</body>
+</html>

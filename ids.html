@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.global{
+    background: yellow;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.inp{
+    margin: 0 10px;
+    background: tomato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+.mini{
+    background: blue;
+    /* width: 100px;
+    height: 100px; */
+    height: 100%;
+    width: 100%;
+    transition: all 2s;
+}
+.delate{
+height: 0;
+width: 0;
+}
+
+</style>
+</head>
+<body>
+   <div class="global">
+
+<div class="inp">
+<div class="mini" title="2"></div>
+</div>
+<div class="inp">
+<div class="mini" title="3"></div>
+    </div>
+<div class="inp">
+<div class="mini" title="4"></div>
+        </div>
+
+   </div>
+
+
+<script>
+document.querySelector('.global').addEventListener
+("click",e=>{
+  console.log(e.target.classList.add("delate"))
+})
+
+</script>
+</body>
+</html>

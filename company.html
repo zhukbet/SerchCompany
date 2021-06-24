@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .current_result_company{
+            display: flex;
+           align-items: center;
+           width: 60%;
+        }
+        .stock_price{
+            width: 60%;
+            font-size: 20px;
+        }
+        .description_info{
+            margin-top: 20px;
+            width: 50%;
+        }
+        .price_plus{
+            color: greenyellow;
+        }
+        .price_minus{
+            color: red;
+        }
+    
+    
+        .spiner.spiner_close{
+        display: none;
+    }
+    .img_company{
+        height: 80px;
+        width: 80px;
+    }
+    canvas {
+        margin-top: 20px;
+    }
+    .back_history {
+        position: fixed;
+        top: 20px;
+         right: 0;
+        border-radius: 25px;
+       border: 4px solid black;
+        padding: 6px 5px;
+    }
+    .back_history img{
+        
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+
+
+    @media screen and (max-width: 500px) {
+   .description_info{
+       width: 80%;
+   }
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="serch_result"></div>
+    <canvas id="bigChart" width="400" height="400"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./loadingSp.js"></script>
+    <script src="api.js"></script>
+    <script src="./bigChart.js"></script>
+    <script src="company.js"></script>
+</body>
+
+</html>
+
+
